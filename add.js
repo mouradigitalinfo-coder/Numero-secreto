@@ -1,5 +1,5 @@
 let listaDeNumerosSorteados = [];
-let numeroLimete = 100;
+let numeroLimete = 50;
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 
@@ -23,7 +23,8 @@ function verificarChute() {
     if (chute == numeroSecreto) {
         exibirTextoNaTela('h1', 'Parabéns, você acertou!');
         let palavraTentativa = tentativas == 1 ? 'tentativa' : 'tentativas';
-        let mensagemTentativas = `Você descobriu o número secreto com ${numeroSecreto} em ${tentativas} ${palavraTentativa}`;
+        let mensagemTentativas = `Você descobriu o número secreto ${numeroSecreto} em ${tentativas} ${palavraTentativa}`;
+        exibirTextoNaTela('p', mensagemTentativas);
 
     }
 }
